@@ -1,0 +1,15 @@
+server:
+  port: 8080
+spring:
+  datasource:
+      druid:
+        url: jdbc:mysql://localhost:3306/kotlin?useUnicode=true&allowPublicKeyRetrieval=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+        username: root
+        password: root
+        driver-class-name: com.mysql.cj.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+  jpa:
+    hibernate:
+      #      数据库表生成策略：update没有创建，有就修改
+      ddl-auto: update
+    show-sql: true
